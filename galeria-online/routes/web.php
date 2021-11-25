@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/comerciantes', 'ComerciantesController@index');
+Route::get('/comerciantes/criar', 'ComerciantesController@create');
+Route::post('/comerciantes/criar', 'ComerciantesController@store');
+Route::delete('/comerciantes/remover/{id}', 'ComerciantesController@destroy');
